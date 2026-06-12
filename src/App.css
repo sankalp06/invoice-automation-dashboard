@@ -1,0 +1,85 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.app-bg-orbs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+}
+
+.orb-1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, #C7D2FE, transparent);
+  top: -120px; right: -100px;
+  animation: driftA 18s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, #DDD6FE, transparent);
+  bottom: 10%; left: -80px;
+  animation: driftB 22s ease-in-out infinite alternate;
+}
+
+.orb-3 {
+  width: 280px; height: 280px;
+  background: radial-gradient(circle, #BAE6FD, transparent);
+  top: 40%; right: 20%;
+  animation: driftC 26s ease-in-out infinite alternate;
+}
+
+@keyframes driftA {
+  from { transform: translate(0,0) scale(1); }
+  to   { transform: translate(40px, 60px) scale(1.1); }
+}
+@keyframes driftB {
+  from { transform: translate(0,0) scale(1); }
+  to   { transform: translate(-30px, 50px) scale(1.08); }
+}
+@keyframes driftC {
+  from { transform: translate(0,0) scale(1); }
+  to   { transform: translate(50px,-40px) scale(0.92); }
+}
+
+.app-main {
+  position: relative;
+  z-index: 1;
+  padding: 32px 0 64px;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.page-intro {
+  margin-bottom: 36px;
+}
+
+.page-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  margin-top: 8px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
